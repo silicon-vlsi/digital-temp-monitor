@@ -36,7 +36,8 @@ LM07 tsense(.TEMP_SET(TEMP_SET),.CS(CS), .SCK(SCK), .SIO(SIO));
 //DUT <-> LM07 Connections
 assign CS = uio_out[0];
 assign SCK = uio_out[1];
-assign uio_in[2] = SIO;
+//uio_in[2] is reg so cannot be 'assigned'
+always @(*) begin uio_in[2] <= SIO; end
 
 //********INITIALS****************
 //Initialize CS
@@ -44,15 +45,18 @@ assign uio_in[2] = SIO;
 initial begin
   $dumpfile("tb.vcd");
   $dumpvars(0, tb);
-  #15000;
+  rst_n = 1'b0;
+  TEMP_SET = 16'h0033;
+  clk = 1'b1;
+  ena = 1'b1;
+  #10;
+    rst_n = 1'b1;
+  #150;
   $finish(2);   
 end
 
-initial rst_n = 1'b0;
-initial TEMP_SET = 16'h0033;
 
 //Generate test clock
-initial clk= 1'b1;
 initial forever #10 clk = ~clk;    
 
 endmodule
