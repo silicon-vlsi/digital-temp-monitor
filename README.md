@@ -14,6 +14,15 @@ This is a repository which can be use a starting point to dsign and implement th
 - Start the blocks:
   - Design a **5-b counter**. Use **DEFINES** for the value for reset (eg. **RST_COUNT**) and maximum count (eg. **MAX_COUNT**)
   - Design **3-state (IDLE, READ, LATCH)**  such that:
-    - At _reset_ : **IDLE**
-    - During read: **READ**
-    - During latch: *LATCH*
+    - At _reset_ OR (NOT READ amd NOT LATCH): **IDLE** state
+    - During read: **READ** state
+    - During latch: **LATCH** state
+    - After system reset or counter reset, remain in IDLE state for `CS_LOW_COUNT` clock cycles.
+    - Remain in READ state from `CS_LOW_COUNT` till `CS_HIGH_COUNT`
+    - Then switch to IDLE state and after `SPI_LATCH_COUNT` switch to LATCH state for 1 clock cycle and then back to IDLE state.
+  - Now let's implement the state machine for the following conditions:
+    - The SPI clock `SCK` is system clock divide by 2
+    - Let one complete read cycle (ie. IDLE-READ-IDLE-LATCH-IDLE) be 28  system clock cycles.
+    - After reset, IDLE state for 4 system clock cycles
+    - READ state for 16 system clock cycles (8 SCK cyceles)
+    - LATCH state after 22 system clock cycles 
