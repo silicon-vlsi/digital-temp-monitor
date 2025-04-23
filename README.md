@@ -10,6 +10,18 @@ This is a repository which can be use a starting point to dsign and implement th
 - Create a fork of this repo and clone it on your WSL Linux.
 - Check [LM70 Datasheet](docs/datasheet-LM70-TI-tempSensor.pdf)
   - Check the basic electrical characteristics: Supply voltage range, temperature range, temperature resolution and accuracy, timing diagram (p-6), temperature data format (p-10).
+  - **EXCERCISE** From the timing diagram specification (p:5-6), find the _maximum_ and _minimum_ clock frequency (SCK) the sensor can operate.
+
+![Temperature Data Format](docs/LM70-temp-data-format.png)
+
+- The diagram above shows the data format from the temperature sensor.
+  - `11-bit data` with 2s complement signed format.
+  - LSB is `0.25 C`
+- In this project we will only read the 8-bit MSB. That will give us an LSB of `2-deg C`
+- **EXCERCISE**: When you read `0001 0100` What is the temperature in C ?
+
+**DESIGN EXCERCISE**
+
 - Run the template code which has the DUT module and the model of the LM07 connected.
 - Start the blocks:
   - Design a **5-b counter**. Use **DEFINES** for the value for reset (eg. **RST_COUNT**) and maximum count (eg. **MAX_COUNT**)
@@ -26,3 +38,8 @@ This is a repository which can be use a starting point to dsign and implement th
     - After reset, IDLE state for 4 system clock cycles
     - READ state for 16 system clock cycles (8 SCK cyceles)
     - LATCH state after 22 system clock cycles 
+    - See the image below with the timing diagram of the implemented FSM with above parameters.
+
+![FSM Timing](docs/FSM-timing-example.png)
+
+
