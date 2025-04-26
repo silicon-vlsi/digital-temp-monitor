@@ -1,5 +1,9 @@
 This is a repository which can be use a starting point to dsign and implement the [Digital Temperature Monitor](https://github.com/silicon-efabless/tt06-silicon-tinytapeout-lm07).
 
+# Resources
+- **ONLINE SESSIONS**
+  - [19 Apr 2025](https://www.youtube.com/watch?v=QM1QXcxku7U): Zoom Session, Digital Temperature Monitor project session I. Introduciton to the temperature monitor project.
+
 # Project Description 
 
 ![Block Diagram](docs/tt06-blockdiag.png)
