@@ -2,6 +2,7 @@ This is a repository which can be use a starting point to dsign and implement th
 
 # Resources
 - **ONLINE SESSIONS**
+  - [03 May 2025](https://youtu.be/6BhwwtVvAQU): Zoom Session, Digital Temperature Monitor project session III (Conclusion): Designing the rest of the chain, Shift Reg, Latch, BCD conversion.
   - [26 Apr 2025](https://youtu.be/4QfLPhMzcUk): Zoom Session, Digital Temperature Monitor project session II: Creating the SPI FSM.
   - [19 Apr 2025](https://www.youtube.com/watch?v=QM1QXcxku7U): Zoom Session, Digital Temperature Monitor project session I. Introduciton to the temperature monitor project.
 
