@@ -46,12 +46,13 @@ initial begin
   $dumpfile("tb.vcd");
   $dumpvars(0, tb);
   rst_n = 1'b0;
-  TEMP_SET = 16'h0033;
+  ui_in = 8'h02;
+  TEMP_SET = 16'h0C00;
   clk = 1'b1;
   ena = 1'b1;
   #10;
     rst_n = 1'b1;
-  #150;
+  #1450;
   $finish(2);   
 end
 

@@ -1,10 +1,16 @@
 This is a repository which can be use a starting point to dsign and implement the [Digital Temperature Monitor](https://github.com/silicon-efabless/tt06-silicon-tinytapeout-lm07).
 
-# Project Description
+# Resources
+- **ONLINE SESSIONS**
+  - [03 May 2025](https://youtu.be/6BhwwtVvAQU): Zoom Session, Digital Temperature Monitor project session III (Conclusion): Designing the rest of the chain, Shift Reg, Latch, BCD conversion.
+  - [26 Apr 2025](https://youtu.be/4QfLPhMzcUk): Zoom Session, Digital Temperature Monitor project session II: Creating the SPI FSM.
+  - [19 Apr 2025](https://www.youtube.com/watch?v=QM1QXcxku7U): Zoom Session, Digital Temperature Monitor project session I. Introduciton to the temperature monitor project.
+
+# Project Description 
 
 ![Block Diagram](docs/tt06-blockdiag.png)
 
-- **PRE-REQUISITES**
+- **PRE-REQUISITES**:
   - Install **Ubuntu 24.04** (22.04 is fine too) on **WSL2**. [See instructions here](https://github.com/silicon-vlsi-org/eda-wsl2)
   - Create a [GitHub](https://github.com) account if you don't have one already.
 - Create a fork of this repo and clone it on your WSL Linux.
