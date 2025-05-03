@@ -16,7 +16,7 @@ This is a repository which can be use a starting point to dsign and implement th
 
 - The diagram above shows the data format from the temperature sensor.
   - `11-bit data` with 2s complement signed format.
-  - LSB is `0.25 C`
+  - LSB is `0.25 C` 
 - In this project we will only read the 8-bit MSB. That will give us an LSB of `2-deg C`
 - **EXCERCISE**: When you read `0001 0100` What is the temperature in C ?
 
